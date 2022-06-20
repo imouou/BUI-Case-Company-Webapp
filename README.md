@@ -43,8 +43,9 @@ Are you still using responsive layouts? Are you Still developing an independent 
 
 ## 交互动画预览(Interactive animation preview)
 
-<img src="https://github.com/imouou/bui-case-company-webapp/blob/main/preview/01.gif" alt="首页交互" style="width:240px !important">
-<img src="https://github.com/imouou/bui-case-company-webapp/blob/main/preview/02.gif" alt="详情交互" style="width:240px !important">
+| <img src="https://github.com/imouou/bui-case-company-webapp/blob/main/preview/01.gif" alt="首页" width="240px"> | <img src="https://github.com/imouou/bui-case-company-webapp/blob/main/preview/02.gif" alt="首页" width="240px"> |
+|:--------------------:|:------------------------:|
+|  首页交互 | 详情交互 |
 
 ## 截图预览(Screenshot preview)
 
