@@ -1,0 +1,41 @@
+<style>
+    .userinfo {
+        text-align: center;
+        background-color: #39a4ff;
+        color: #fff;
+        height: 3.3rem;
+    }
+
+    .userinfo .bui-thumbnail {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0 auto .2rem auto;
+    }
+</style>
+<div id="sidebarWrap" class="bui-sidebar-wrap">
+    <div class="bui-sidebar swiperight">
+        <!-- 头像 -->
+        <div class="userinfo bui-box-center">
+            <div>
+                <div class="bui-thumbnail ring">
+                    <img src="http://easybui.com/demo/images/applogo.png" alt="">
+                </div>
+                <div class="nickname">BUI</div>
+            </div>
+        </div>
+        <component id="sidebar" name="pages/components/navlist/index" delay="true">
+            <!-- <ul class="bui-list">
+                <li class="bui-btn bui-box">
+                    <div class="icon"><img src="images/applogo.png" alt=""></div>
+                    <div class="span1">导航1</div>
+                    <i class="icon-listright"></i>
+                </li>
+            </ul> -->
+        </component>
+    </div>
+    <div class="bui-page bui-box-vertical">
+        <main>
+            <div id="uiTab" class="bui-tab"></div>
+        </main>
+    </div>
+</div>

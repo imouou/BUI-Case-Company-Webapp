@@ -1,0 +1,21 @@
+{
+    "code": 1,
+    "data": {
+        "id": "1",
+        "acode": "cn",
+        "name": "Easybui",
+        "address": "广州",
+        "postcode": "510000",
+        "contact": "王先生",
+        "mobile": "13800138000",
+        "phone": "020-88888888",
+        "fax": "020-88888888",
+        "email": "easybui@163.com",
+        "qq": "64447151",
+        "weixin": "\/static\/upload\/image\/20180715\/1531651052464521.png",
+        "blicense": "91430102567888888G",
+        "other": ""
+    },
+    "tourl": "",
+    "rowtotal": 1
+}

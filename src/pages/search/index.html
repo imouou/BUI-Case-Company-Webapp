@@ -1,0 +1,52 @@
+<style>
+    .page-product .bui-dialog {
+        top: 0;
+        left: 2.4rem;
+        bottom: 0;
+    }
+    
+    .page-product .subtitle {
+        margin-bottom: .2rem;
+    }
+    
+    .page-product .bui-dialog-main .span1 {
+        margin-bottom: .2rem;
+    }
+    
+    .page-product .bui-check label {
+        border-radius: .05rem;
+    }
+    
+    .page-product .bui-dialog .bui-dialog-foot.bui-box :last-child [class*=bui-btn] {
+        border-radius: 0;
+    }
+</style>
+<div class="bui-page bui-box-vertical page-product">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">搜索</div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+        
+        <!-- 搜索条控件结构 -->
+        <div id="searchbar" class="bui-searchbar bui-box">
+            <div class="span1">
+                <div class="bui-input">
+                    <i class="icon-search"></i>
+                    <input type="search" value="" placeholder="请输入关键字" />
+                </div>
+            </div>
+            <div class="btn-search">搜索</div>
+        </div>
+        
+    </header>
+    <main>
+        <!-- 列表控件结构 -->
+        <ul class="bui-list" b-template="search.tplContent(search.content)">
+        </ul>
+    </main>
+</div>

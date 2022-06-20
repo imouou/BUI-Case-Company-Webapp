@@ -1,0 +1,135 @@
+<style>
+    .bui-list .bui-btn .icon-facefill {
+        font-size: 0.4rem;
+        margin-right: 0.2rem;
+    }
+
+    .panel-introl .bui-panel-main {
+        padding: .2rem;
+    }
+
+    .panel-introl p {
+        text-indent: 2em;
+        line-height: 2;
+        color: #333;
+    }
+
+    .panel-introl .bui-box-text-hide {
+        -webkit-line-clamp: 4;
+        margin-bottom: .3rem;
+    }
+
+    .autoheight {
+        height: auto !important;
+    }
+
+    .brand-thumbnail .bui-navbar .bui-nav>[class*=span],
+    .brand-thumbnail .bui-nav>li {
+        padding-left: .1rem;
+        padding-right: .1rem;
+    }
+
+    .brand-thumbnail .bui-btn .bui-thumbnail {
+        margin-right: 0;
+        margin-bottom: .2rem;
+    }
+
+    .bui-panel .bui-thumbnail {
+        height: 1.4rem;
+    }
+
+    .bui-panel .bui-thumbnail img {
+        object-fit: contain;
+        /* 图片自适应*/
+        height: 100%;
+    }
+
+    .bui-list-thumbnail .bui-thumbnail img {
+        /* 图片全覆盖*/
+        object-fit: cover;
+        height: 100%;
+    }
+</style>
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a id="menu" class="bui-btn" b-click="home.openSide"><i class="icon-menu"></i></a>
+            </div>
+            <div class="bui-bar-main">首页</div>
+            <div class="bui-bar-right">
+                <a class="bui-btn" href="pages/search/index"><i class="icon-search"></i></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="uiSlide" class="bui-slide bui-slide-skin01"></div>
+        <div class="bui-panel panel-introl">
+            <div class="bui-panel-head bui-box-center">公司简介</div>
+            <div class="bui-panel-main container-xy">
+                <p class="bui-box-text-hide" b-text="home.about">
+                </p>
+
+                <div class="bui-btn small round" href="pages/about/index.html">查看更多</div>
+            </div>
+        </div>
+        <div class="bui-panel panel-introl">
+            <div class="bui-panel-head">主要产品</div>
+            <div class="bui-panel-main container-xy">
+                <div class="bui-navbar brand-thumbnail">
+                    <ul class="bui-nav" b-template="home.tplProduct(home.product)">
+                        <!-- <li>之间不能有空隙 -->
+                        <!-- <li class="bui-btn" href="pages/case/detail.html">
+                            <div class="bui-thumbnail">
+                                <img src="http://www.easybui.com/demo/images/banner02.png" alt="">
+                            </div>
+                            <h3>BUI Fast</h3>
+                        </li>
+                        <li class="bui-btn" href="pages/case/detail.html">
+                            <div class="bui-thumbnail">
+                                <img src="http://www.easybui.com/demo/images/banner01.png" alt="">
+                            </div>
+                            <h3>buijs</h3>
+                        </li>
+                        <li class="bui-btn" href="pages/case/detail.html">
+                            <div class="bui-thumbnail">
+                                <img src="http://www.easybui.com/demo/images/banner02.png" alt="">
+                            </div>
+                            <h3>模板库</h3>
+                        </li>
+                        <li class="bui-btn" href="pages/case/detail.html">
+                            <div class="bui-thumbnail">
+                                <img src="http://www.easybui.com/demo/images/banner01.png" alt="">
+                            </div>
+                            <h3>案例库</h3>
+                        </li>
+                        <li class="bui-btn" href="pages/case/detail.html">
+                            <div class="bui-thumbnail">
+                                <img src="http://www.easybui.com/demo/images/banner02.png" alt="">
+                            </div>
+                            <h3>插件库</h3>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bui-panel">
+            <div class="bui-panel-head">最新文章</div>
+            <div class="bui-panel-main">
+                <div id="scrollList" class="bui-scroll autoheight">
+                    <div class="bui-scroll-head"></div>
+                    <div class="bui-scroll-main">
+                        <ul class="bui-list bui-list-thumbnail">
+                        </ul>
+                    </div>
+                </div>
+                <div class="container-xy">
+                    <div class="bui-btn small round" href="pages/news/index.html">查看更多</div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+</div>

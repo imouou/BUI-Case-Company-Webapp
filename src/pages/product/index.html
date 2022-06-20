@@ -1,0 +1,49 @@
+<style>
+    .page-product .bui-dialog {
+        top: 0;
+        left: 2.4rem;
+        bottom: 0;
+    }
+
+    .page-product .subtitle {
+        margin-bottom: .2rem;
+    }
+
+    .page-product .bui-dialog-main .span1 {
+        margin-bottom: .2rem;
+    }
+
+    .page-product .bui-check label {
+        border-radius: .05rem;
+    }
+
+    .page-product .bui-dialog .bui-dialog-foot.bui-box :last-child [class*=bui-btn] {
+        border-radius: 0;
+    }
+
+    .bui-btn .bui-thumbnail {
+        width: 1.4rem;
+    }
+</style>
+<div class="bui-page page-product">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a id="btnback" class="bui-btn" onclick="bui.back()" style="display:none;"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">产品</div>
+        <div class="bui-bar-right">
+            <!-- <a id="menu" class="bui-btn"><i class="icon-menu"></i></a> -->
+        </div>
+    </header>
+    <main>
+        <!-- 列表控件 html 对应的结构:  -->
+        <div id="uiListProduct" class="bui-scroll">
+            <div class="bui-scroll-head"></div>
+            <div class="bui-scroll-main">
+                <ul class="bui-list">
+                </ul>
+            </div>
+            <div class="bui-scroll-foot"></div>
+        </div>
+    </main>
+</div>

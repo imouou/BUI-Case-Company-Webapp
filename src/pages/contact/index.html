@@ -1,0 +1,59 @@
+<style type="text/css">
+    .page-message .bui-list {
+        margin-bottom: .2rem;
+    }
+    
+    .page-message .bui-label {
+        margin-bottom: 0;
+    }
+    
+    .page-message .bui-list .bui-value {
+        color: #333;
+    }
+</style>
+
+<div class="bui-page page-message">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a id="showBack" class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">联系我们</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <ul class="bui-list" b-template="contact.tplInfo(contact.info)">
+            <!-- <li class="bui-btn bui-box">
+                <div class="span1">
+                    <div class="bui-value">XX网络科技有限公司</div>
+                </div>
+            </li> -->
+        </ul>
+        <div class="subtitle">在线留言</div>
+        <ul class="bui-list">
+            <li class="bui-btn bui-box clearactive">
+                <div class="span1">
+                    <input type="text" class="bui-input" value="" placeholder="请输入联系人" b-model="contact.form.contacts">
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <div class="span1">
+                    <input type="text" class="bui-input" value="" placeholder="请输入手机号码" b-model="contact.form.mobile">
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <div class="span1">
+                    <textarea name="" id="" cols="30" rows="5" class="bui-input" placeholder="请输入留言内容" b-model="contact.form.content"></textarea>
+                </div>
+            </li>
+        </ul>
+        <div class="bui-box-space">
+            <div class="span1">
+                <div class="bui-btn round" b-click="contact.reset">重置</div>
+            </div>
+            <div class="span1">
+                <div class="bui-btn primary round" b-click="contact.submit">提交</div>
+            </div>
+        </div>
+    </main>
+</div>

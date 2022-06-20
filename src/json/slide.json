@@ -1,0 +1,49 @@
+{
+    "code": 1,
+    "data": [
+        {
+            "id": "1",
+            "acode": "cn",
+            "gid": "1",
+            "pic": "images/banner/banner1.jpg",
+            "link": "http:\/\/www.easybui.com",
+            "title": "easybui",
+            "subtitle": "BUI快速开发",
+            "sorting": "255",
+            "create_user": "admin",
+            "update_user": "admin",
+            "create_time": "2018-03-01 16:19:03",
+            "update_time": "2018-04-12 10:43:19"
+        },
+        {
+            "id": "2",
+            "acode": "cn",
+            "gid": "1",
+            "pic": "images/banner/banner2.jpg",
+            "link": "http:\/\/www.easybui.com",
+            "title": "easybui",
+            "subtitle": "零配置，开箱即用",
+            "sorting": "255",
+            "create_user": "admin",
+            "update_user": "admin",
+            "create_time": "2018-04-12 10:46:07",
+            "update_time": "2018-04-12 10:46:07"
+        },
+        {
+            "id": "3",
+            "acode": "cn",
+            "gid": "1",
+            "pic": "images/banner/banner3.jpg",
+            "link": "http:\/\/www.easybui.com",
+            "title": "easybui",
+            "subtitle": "丰富的组件",
+            "sorting": "255",
+            "create_user": "admin",
+            "update_user": "admin",
+            "create_time": "2018-04-12 10:46:07",
+            "update_time": "2018-04-12 10:46:07"
+        }
+    ],
+    "tourl": "",
+    "rowtotal": 2
+}

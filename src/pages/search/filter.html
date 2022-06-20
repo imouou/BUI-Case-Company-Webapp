@@ -1,0 +1,116 @@
+<style>
+    .page-product .bui-dialog {
+        top: 0;
+        left: 2.4rem;
+        bottom: 0;
+    }
+    
+    .page-product .subtitle {
+        margin-bottom: .2rem;
+    }
+    
+    .page-product .bui-dialog-main .span1 {
+        margin-bottom: .2rem;
+    }
+    
+    .page-product .bui-check label {
+        border-radius: .05rem;
+    }
+    
+    .page-product .bui-dialog .bui-dialog-foot.bui-box :last-child [class*=bui-btn] {
+        border-radius: 0;
+    }
+</style>
+<div class="bui-page page-product">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+        </div>
+        <div class="bui-bar-main">产品</div>
+        <div class="bui-bar-right">
+            <a id="menu" class="bui-btn"><i class="icon-menu"></i></a>
+        </div>
+    </header>
+    <main>
+        <!-- 列表控件 html 对应的结构:  -->
+        <div id="uiListProduct" class="bui-scroll">
+            <div class="bui-scroll-head"></div>
+            <div class="bui-scroll-main">
+                <ul class="bui-list">
+                </ul>
+            </div>
+            <div class="bui-scroll-foot"></div>
+        </div>
+    </main>
+    <div id="uiDialogFilter" class="bui-dialog">
+        <div class="bui-dialog-head"></div>
+        <div class="bui-dialog-main">
+            <h3 class="subtitle">分类</h3>
+            <div class="bui-fluid-space-2">
+                <div class="span1">
+                    <div class="bui-check">
+                        <input id="cate01" type="radio" name="cate"><label for="cate01">手机通讯</label>
+                    </div>
+                </div>
+                <div class="span1">
+                    <div class="bui-check">
+                        <input id="cate02" type="radio" name="cate"><label for="cate02">手机配件</label>
+                    </div>
+                </div>
+                <div class="span1">
+                    <div class="bui-check">
+                        <input id="cate03" type="radio" name="cate"><label for="cate03">智能设备</label>
+                    </div>
+                </div>
+                <div class="span1">
+                    <div class="bui-check">
+                        <input id="cate04" type="radio" name="cate"><label for="cate04">数码配件</label>
+                    </div>
+                </div>
+            </div>
+            <h3 class="subtitle">品牌</h3>
+            <div class="bui-fluid-space-3">
+                <div class="span1">
+                    <div class="bui-check">
+                        <input id="brand01" type="radio" name="brand"><label for="brand01">品牌1</label>
+                    </div>
+                </div>
+                <div class="span1">
+                    <div class="bui-check">
+                        <input id="brand02" type="radio" name="brand"><label for="brand02">品牌2</label>
+                    </div>
+                </div>
+                <div class="span1">
+                    <div class="bui-check">
+                        <input id="brand03" type="radio" name="brand"><label for="brand03">品牌3</label>
+                    </div>
+                </div>
+                <div class="span1">
+                    <div class="bui-check">
+                        <input id="brand04" type="radio" name="brand"><label for="brand04">品牌4</label>
+                    </div>
+                </div>
+                <div class="span1">
+                    <div class="bui-check">
+                        <input id="brand05" type="radio" name="brand"><label for="brand05">品牌5</label>
+                    </div>
+                </div>
+                <div class="span1">
+                    <div class="bui-check">
+                        <input id="brand06" type="radio" name="brand"><label for="brand06">品牌6</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bui-dialog-foot bui-box">
+            <div class="span1">
+                <div class="bui-btn">重置</div>
+            </div>
+            <div class="span1">
+                <div class="bui-btn primary">确定</div>
+            </div>
+        </div>
+
+        <div class="bui-dialog-close"><i class="icon-close"></i></div>
+    </div>
+</div>
