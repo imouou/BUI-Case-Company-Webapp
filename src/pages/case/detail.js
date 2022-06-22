@@ -11,9 +11,9 @@ loader.define(function (require, exports, module, global) {
             content: "",
         },
         methods: {
-            getContent: function (id) {
+            getContent: function (url) {
                 global.ajax({
-                    url: global.api.getContentUrl + id
+                    url: url
                 }).then((res) => {
                     console.log(res)
                     let data = res.data || {};
@@ -55,9 +55,9 @@ loader.define(function (require, exports, module, global) {
         mounted: function () {
             // 数据解析后执行
 
-            // this.getContent(params.id);
             // 测试数据
-            this.getContent(params.id + ".json");
+            let contenturl = global.api.getContentUrl + params.id + ".json";
+            this.getContent(contenturl);
 
         }
     })

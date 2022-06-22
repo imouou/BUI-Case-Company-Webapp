@@ -11,6 +11,12 @@
         height: 1.6rem;
         margin: 0 auto .2rem auto;
     }
+
+    /* 修正sidebar菜单样式，1.7.2需要修改层级 */
+    .bui-sidebar-wrap .bui-sidebar {
+        z-index: 101;
+        background: #fff;
+    }
 </style>
 <div id="sidebarWrap" class="bui-sidebar-wrap">
     <div class="bui-sidebar swiperight">

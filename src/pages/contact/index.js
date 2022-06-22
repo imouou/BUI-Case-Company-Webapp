@@ -19,9 +19,9 @@ loader.define(function (require, exports, module, global) {
             }
         },
         methods: {
-            getInfo: function () {
+            getInfo: function (url) {
                 global.ajax({
-                    url: global.api.getInfoCompanyUrl
+                    url: url
                 }).then((res) => {
 
                     res.data && (this.info = res.data);
@@ -30,9 +30,9 @@ loader.define(function (require, exports, module, global) {
             checkFromMain: function () {
                 // 检测是否从main进入联系方式页面
                 if (window.location.hash === "#main") {
-                    router.$("#showBack").css("display", "none")
+                    bui.$("#showBack").css("display", "none")
                 } else {
-                    router.$("#showBack").css("display", "block")
+                    bui.$("#showBack").css("display", "block")
                 }
             },
             checkFormEmpty: function (opt) {
@@ -125,7 +125,7 @@ loader.define(function (require, exports, module, global) {
         },
         mounted: function () {
             // 数据解析后执行
-            this.getInfo();
+            this.getInfo(global.api.getInfoCompanyUrl);
             // 如果是从main进入联系方式页面，无需展示后退按钮
             this.checkFromMain();
 

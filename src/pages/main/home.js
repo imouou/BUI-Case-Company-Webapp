@@ -6,7 +6,8 @@ loader.define(function (require, exports, module, global) {
         scope: "home",
         data: {
             about: "",
-            product: []
+            product: [],
+            article: [],
         },
         methods: {
             openSide: function () {
@@ -23,15 +24,15 @@ loader.define(function (require, exports, module, global) {
                     this.about = res.data ? res.data.description : "";
                 })
             },
-            getProduct: function (id) {
+            getProduct: function (url) {
                 global.ajax({
-                    url: global.api.getListUrl + id
+                    url: url
                 }).then((res) => {
 
-                    this.product.$replace(res.data);
+                    this.product = res.data;
                 })
             },
-            slide: function () {
+            slide: function (url) {
 
                 // 焦点图 js 初始化:
                 let uiSlide = bui.slide({
@@ -44,7 +45,7 @@ loader.define(function (require, exports, module, global) {
                 })
                 // 获取轮播图的数据
                 global.ajax({
-                    url: global.api.getSlideUrl
+                    url: url
                 }).then(function (res) {
 
                     let data = res.data || [];
@@ -60,42 +61,14 @@ loader.define(function (require, exports, module, global) {
                     uiSlide.option("data", data);
                 })
             },
-            newsList: function () {
+            newsList: function (url) {
+                global.ajax({
+                    url: url
+                }).then((res) => {
 
-                var uiList = bui.list({
-                    id: "#scrollList",
-                    url: global.api.getListUrl + "2.json",// 新闻列表
-                    pageSize: 3,
-                    data: {},
-                    //如果分页的字段名不一样,通过field重新定义
-                    field: {
-                        page: "page",
-                        size: "num",
-                        data: "data"
-                    },
-                    height: 300,
-                    refresh: false,
-                    autoScroll: false,
-                    template: function (data, res) {
-                        var html = "";
-                        if (data && data.length) {
-                            data.forEach(function (el, index) {
-                                html += `<li class="bui-btn bui-box" href="pages/news/detail.html?id=${el.id}">
-                                    <div class="bui-thumbnail"><img src="${el.ico ? (global.api.path + el.ico) : "images/nopic.png"}" alt=""></div>
-                                    <div class="span1">
-                                        <h3 class="item-title bui-text-hide">${el.title}</h3>
-                                        <p class="item-text">${el.author}</p>
-                                    </div>
-                                </li>`
+                    this.article = res.data;
+                })
 
-                            })
-                        } else {
-                            html = `<li class="bui-btn bui-box">暂无新闻</li>`
-                        }
-
-                        return html;
-                    }
-                });
             }
         },
         watch: {},
@@ -113,6 +86,25 @@ loader.define(function (require, exports, module, global) {
                 })
 
                 return html;
+            },
+            tplArticle: function (data, res) {
+                var html = "";
+                if (data && data.length) {
+                    data.forEach(function (el, index) {
+                        html += `<li class="bui-btn bui-box" href="pages/news/detail.html?id=${el.id}">
+                        <div class="bui-thumbnail"><img src="${el.ico ? el.ico : "images/nopic.png"}" alt=""></div>
+                        <div class="span1">
+                            <h3 class="item-title bui-text-hide">${el.title}</h3>
+                            <p class="item-text">${el.author}</p>
+                        </div>
+                    </li>`
+
+                    })
+                } else {
+                    html = `<li class="bui-btn bui-box">暂无新闻</li>`
+                }
+
+                return html;
             }
         },
         beforeMount: function () {
@@ -121,13 +113,13 @@ loader.define(function (require, exports, module, global) {
         },
         mounted: function () {
             // 初始化轮播图
-            this.slide();
+            this.slide(global.api.getSlideUrl);
             // 初始化新闻列表
-            this.newsList();
+            this.newsList(global.api.getListUrl + "2.json");
             // 获取公司简介
-            this.getCompany();
+            this.getCompany(global.api.getContentCompanyUrl);
             // 获取产品列表
-            this.getProduct("5.json");
+            this.getProduct(global.api.getListUrl + "5.json");
         }
     })
 

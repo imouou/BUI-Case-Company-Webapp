@@ -78,10 +78,10 @@ loader.define(function (require, exports, module, global) {
             // 侧边栏 js 初始化: 
             var uiSidebar = bui.sidebar({
                 id: "#sidebarWrap",
+                // handleMove: false,  // 页面不跟着一起移动
                 swipe: false, //滑动跟tab滑动冲突，两个只能取一个
                 width: 600
             })
-
 
             return uiSidebar;
         },

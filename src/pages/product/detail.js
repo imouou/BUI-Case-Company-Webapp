@@ -11,9 +11,9 @@ loader.define(function (require, exports, module, global) {
             contact: "pages/contact/index.html"
         },
         methods: {
-            getContent: function (id) {
+            getContent: function (url) {
                 global.ajax({
-                    url: global.api.getContentUrl + id
+                    url: url
                 }).then((res) => {
 
                     let data = res.data || {};
@@ -108,7 +108,8 @@ loader.define(function (require, exports, module, global) {
         mounted: function () {
             // 数据解析后执行
             // 测试数据的接口
-            this.getContent(params.id + ".json");
+            let url = global.api.getContentUrl + params.id + ".json";
+            this.getContent(url);
 
         }
     })
